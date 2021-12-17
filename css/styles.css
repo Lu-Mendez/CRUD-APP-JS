@@ -51,16 +51,22 @@ text-small {
     font-size: 0.9rem;
   }
   
-  a {
+  .list a {
     color:white;
     text-decoration: none;
     transition: all 0.3s;
   }
   
-  a:hover, a:focus {
+  .list a:hover, a:focus {
+    color: bisque;
     text-decoration: none;
   }
-  
+  .btn.btn-primary{
+    background-color:#FE4365;
+    border-color: #fff;
+  }
+
+
   form-control {
     background: #FE4365;
     border-color: #545454;
