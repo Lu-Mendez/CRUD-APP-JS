@@ -9,6 +9,42 @@ h1{
     color:#C62D3C;
 }
 
+.editar-review {
+  margin-left: 15px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #C62D3C;
+  text-decoration: none;
+}
+
+.borrar-review {
+  background-color: #C62D3C;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.editar-review:hover, .borrar-review:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+#lista-reviews {
+  max-width: 400px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#lista-reviews li {
+  height: 50px;
+  padding: 10px 0;
+  display: grid;
+  border-bottom: 1px solid #ccc;
+  grid-template-columns:75% 30px auto;
+}
 /*Footer*/
 
 text-small {

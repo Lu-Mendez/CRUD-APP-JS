@@ -10,9 +10,6 @@ function eventListeners() {
      //Cuando se envia el formulario
      formulario.addEventListener('submit', agregarreview);
 
-     // Borrar reviews
-     listareviews.addEventListener('click', borrarreview);
-
      // Contenido cargado
      document.addEventListener('DOMContentLoaded', () => {
           reviews = JSON.parse( localStorage.getItem('reviews') ) || []  ;
@@ -68,9 +65,10 @@ function crearHTML() {
      if(reviews.length > 0 ) {
           reviews.forEach( review =>  {
                // crear boton de eliminar
-               const botonBorrar = document.createElement('a');
-               botonBorrar.classList = 'borrar-review';
-               botonBorrar.innerText = 'X';
+               const botonBorrar = '<a class="borrar-review" onclick="borrarreview('+review.id+')">X</a>'
+
+               // crear boton de editar
+               const botonEditar = '<a class="editar-review" onclick="editar('+review.id+')">Editar</a>'
      
                // Crear elemento y añadirle el contenido a la lista
                const li = document.createElement('li');
@@ -79,10 +77,13 @@ function crearHTML() {
                li.innerText = review.texto;
 
                // añade el botón de borrar al review
-               li.appendChild(botonBorrar);
+               li.innerHTML += botonBorrar;
+
+               // añade el botón de editar al review
+               li.innerHTML += botonEditar;
 
                // añade un atributo único...
-               li.dataset.reviewId = review.id;
+               li.id = review.id;
 
                // añade el review a la lista
                listareviews.appendChild(li);
@@ -93,13 +94,16 @@ function crearHTML() {
 }
 
 // Elimina el review del DOM
-function borrarreview(e) {
-     e.preventDefault();
-
-     // console.log(e.target.parentElement.dataset.reviewId);
-     const id = e.target.parentElement.dataset.reviewId;
-     reviews = reviews.filter( review => review.id != id  );
+function borrarreview(ids) {
+     reviews = reviews.filter( review => review.id != ids  );
      crearHTML();
+}
+
+// Editar el review en el DOM
+function editar(e) {
+     const firstValue = document.getElementById(e).firstChild.data;
+     const txtbx = document.getElementById('review').value = '' + firstValue;
+     borrarreview(e);
 }
 
 // Agrega a local storage
