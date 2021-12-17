@@ -1,16 +1,17 @@
 *{
+    margin: 0;
     padding: 0;
-
+    font-family: 'Exo 2', sans-serif;
 }
-body{
-  font-family: 'Exo 2', sans-serif;
-}
-
 img{
   margin: auto;
   display: block;
   margin-left: 20%;
-  margin-top: 5%;}
+  margin-top: 5%;
+  width: 450px;
+  height: 450px;
+}
+  
 /*
 navbar
 */
@@ -179,6 +180,61 @@ text-small {
       margin-top:10%;
       height: 180px;
       width: 180px;
+    }
+
+
+      #contenido{
+        margin-top:25%;
+        display: none;
+        }
+        .editar-review {
+          margin-left: 15px;
+          padding: 5px;
+          border-radius: 5px;
+          color: #C62D3C;
+          text-decoration: none;
+        }
+        
+        .borrar-review {
+          background-color: #C62D3C;
+          padding: 5px 10px;
+          font-size: 15px;
+          font-weight: 3500;
+          color: #fff;
+          text-decoration: none;
+        }
+        
+        .editar-review:hover, .borrar-review:hover {
+          cursor: pointer;
+          background-color: #fff;
+        }
+        
+        #lista-reviews {
+          max-width: 200px;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+  }
+
+  @media screen and (max-width: 450px height:1200px)  {
+    footer { 
+      background: #212529;
+      bottom:0;
+      position: fixed;
+      
+    }
+    text-small {
+      font-size: 0.2rem;
+    }
+
+    img{
+      margin: auto;
+      display: none;
+      margin-left:10%;
+      margin-top:10%;
+      height:50px;
+      width:50px;
     }
 
 
