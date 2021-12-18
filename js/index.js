@@ -18,7 +18,7 @@ function eventListeners() {
      });
 }
 
-// Añadir review del formulario
+     // Añadir review
 function agregarreview(e) {
      e.preventDefault();
      // leer el valor del textarea
@@ -36,10 +36,9 @@ function agregarreview(e) {
           texto: review
      }
 
-     // Añadirlo a mis reviews
+     // Añadir reviews
      reviews = [...reviews, reviewObj];
-     
-     // Una vez agregado, mandamos renderizar nuestro HTML
+
      crearHTML();
 
      // Reiniciar el formulario
@@ -82,7 +81,7 @@ function crearHTML() {
                // añade el botón de editar al review
                li.innerHTML += botonEditar;
 
-               // añade un atributo único...
+               // añade un atributo 
                li.id = review.id;
 
                // añade el review a la lista

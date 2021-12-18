@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Exo 2', sans-serif;
 }
+
 img{
   margin: auto;
   display: block;
@@ -17,15 +18,16 @@ navbar
 */
 .navbar {
   transition: all 0.4s;
+  background-color: black;
 }
 
 .navbar .nav-link {
-  color: rgb(0, 0, 0);
+  color: rgb(206, 206, 206);
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
-  color: rgb(0, 0, 0);
+  color: rgb(206, 206, 206);
   text-decoration: none;
 }
 
@@ -36,7 +38,7 @@ navbar
 
 /* Change navbar styling on scroll */
 .navbar.active {
-  background: rgb(53, 53, 53);
+  background: rgb(219, 219, 219);
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -49,6 +51,12 @@ navbar
   color: rgb(250, 194, 194);
   text-decoration: none;
 }
+
+
+.navbar .navbar-brand {
+  color: rgb(247, 247, 247);
+}
+
 
 .navbar.active .navbar-brand {
   color: rgb(250, 194, 194);
@@ -71,18 +79,6 @@ navbar
   font-size: 0.9rem !important;
 }
 
-
-.headertext{
-  background-color: #4ca1af;
-  background-image: linear-gradient(135deg, #4ca1af 0%, #c4e0e5 100%);
-}
-
-
-
-h1{
-    text-align: center;
-    color:#C62D3C;
-}
 
 #contenido{
 margin-top:5%;
